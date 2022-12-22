@@ -1,2 +1,115 @@
-Good morning, world.
-Notice how I never said, Hello world.~
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.body.style.backgroundColor = 'black';
+
+            var mapleCodes = document.createElement('div');
+            mapleCodes.innerHTML = 'MapleCodes';
+            mapleCodes.style.color = 'white';
+            mapleCodes.style.fontSize = '100px';
+            mapleCodes.style.fontFamily = 'Arial';
+            mapleCodes.style.textAlign = 'center';
+            mapleCodes.style.marginTop = '200px';
+            document.body.appendChild(mapleCodes);
+
+            mapleCodes.style.fontSize = '50px';
+            mapleCodes.style.fontFamily = 'Helvetica';
+            mapleCodes.style.fontWeight = 'bold';
+
+            mapleCodes.style.fontWeight = 'normal';
+
+            mapleCodes.innerHTML = 'Maple Codes';
+
+            mapleCodes.style.color = 'grey';
+
+            mapleCodes.style.marginTop = '200px';
+
+            mapleCodes.innerHTML = '<span>M</span><span>a</span><span>p</span><span>l</span><span>e</span><span> </span><span>C</span><span>o</span><span>d</span><span>e</span><span>s</span>';
+
+            var mapleCodesSpans = mapleCodes.getElementsByTagName('span');
+            for (var i = 0; i < mapleCodesSpans.length; i++) {
+                mapleCodesSpans[i].addEventListener('mouseover', function () {
+                    this.style.color = 'white';
+                    this.style.fontWeight = 'bold';
+                });
+                mapleCodesSpans[i].addEventListener('mouseout', function () {
+                    this.style.color = 'grey';
+                    this.style.fontWeight = 'normal';
+                });
+            }
+
+            for (var i = 0; i < mapleCodesSpans.length; i++) {
+                mapleCodesSpans[i].addEventListener('mouseover', function () {
+                    this.style.color = 'white';
+                    this.style.fontWeight = 'bold';
+                    if (this.previousSibling) {
+                        this.previousSibling.style.color = 'white';
+                    }
+                    if (this.nextSibling) {
+                        this.nextSibling.style.color = 'white';
+                    }
+                });
+                mapleCodesSpans[i].addEventListener('mouseout', function () {
+                    this.style.color = 'grey';
+                    this.style.fontWeight = 'normal';
+                    if (this.previousSibling) {
+                        this.previousSibling.style.color = 'grey';
+                        this.previousSibling.style.fontWeight = 'normal';
+                    }
+                    if (this.nextSibling) {
+                        this.nextSibling.style.color = 'grey';
+                        this.nextSibling.style.fontWeight = 'normal';
+                    }
+                });
+            }
+
+            var footer = document.createElement('div');
+            footer.innerHTML = 'VR Enthusiast at night, Full Stack at Day.';
+            footer.style.color = 'grey';
+            footer.style.fontSize = '20px';
+            footer.style.fontFamily = 'Helvetica';
+            footer.style.textAlign = 'center';
+            footer.style.marginTop = '20px';
+            document.body.appendChild(footer);
+
+            var bottomText = document.createElement('div');
+            bottomText.innerHTML = 'Work in progress site, was just testing around with pages.github';
+            bottomText.style.color = 'grey';
+            bottomText.style.fontSize = '20px';
+            bottomText.style.fontFamily = 'Helvetica';
+            bottomText.style.textAlign = 'center';
+            bottomText.style.marginTop = '20px';
+            document.body.appendChild(bottomText);
+
+            bottomText.style.position = 'absolute';
+            bottomText.style.bottom = '0';
+            bottomText.style.width = '100%';
+
+            bottomText.style.marginBottom = '20px';
+        });
+    </script>
+</head>
+
+<body style="margin: 0;">
+    <div
+        style="background-color: black; position: fixed; bottom: 0; width: 100%; height: 20px; padding: 20px; opacity: .85; z-index: 1000;">
+        <svg id="Layer_1" data-name="Layer 1" height="40px" width="40px" style="top: -8px;
+            position: relative;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #fff;
+                    }
+                </style>
+            </defs>
+            <title>openai-symbol-flat-white</title>
+        </svg>
+    </div>
+</body>
+
+</html>

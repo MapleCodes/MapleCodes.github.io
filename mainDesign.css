@@ -1,0 +1,68 @@
+/* Background */
+body {
+  color: white;
+
+  font-family: 'Consolas', 'Courier New', monospace;
+
+  background-color: #000000;
+  background-image: url('https://i.pinimg.com/originals/5f/9f/bd/5f9fbdbe038edf4a09fdb52c94ad59bf.jpg');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body:before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+/* Text */
+.tobeadded {
+  color: white;
+  font-size: calc(10px + 1vmin);
+  font-family: 'Consolas', 'Courier New', monospace;
+
+  /* With absolute position, put everything in the center of the page. */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Surround the text with a black box. */
+  padding: 40px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  /* Add shadows to the bottom */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+
+  /* Make the box responsive */
+  width: 100%;
+  max-width: 500px;
+
+  animation: appear 1s linear forwards;
+}
+
+.blinking-underscore {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

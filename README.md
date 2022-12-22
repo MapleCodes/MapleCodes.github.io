@@ -1,2 +1,1 @@
-# MapleCodes.github.io
-Gugu Gaga. Tryna setup Pages Github for my future career path that is broken.
+GUGU GAGA. Still working on this. please ignore it. xD
